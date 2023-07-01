@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to the Matrix</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <button class="settings-btn" title="Settings">
+      <i class="fas fa-cog"></i>
+    </button>
+    <div class="settings-panel" id="hidden">
+      <div class="panel-header">
+        <h3>Settings</h3>
+        <button class="x-btn"><i class="fas fa-close"></i></button>
+      </div>
+      <div class="settings">
+        <div class="setting change-mode">
+          <span>mode</span>
+          <select id="mode-select" class="field" autocomplete="off">
+            <option value="binary">binary</option>
+            <option value="hex">hexadecimal</option>
+            <option value="ascii" selected>ASCII</option>
+            <option value="samurai">samurai</option>
+            <option value="mixed">ASCII+samurai</option>
+          </select>
+        </div>
+        <div class="setting change-size">
+          <span>text size</span>
+          <div class="field">
+            <input
+              id="resize-font"
+              type="range"
+              min="10"
+              max="50"
+              step="1"
+              value="16"
+              autocomplete="off"
+            />
+            <span class="f-size">16px</span>
+          </div>
+        </div>
+        <div class="setting change-speed">
+          <span>speed</span>
+          <div class="field">
+            <input
+              id="change-speed"
+              type="range"
+              min="1"
+              max="20"
+              step="1"
+              value="18"
+              autocomplete="off"
+            />
+            <span class="f-size">20</span>
+          </div>
+        </div>
+        <div class="setting glow">
+          <span>glowing effect</span>
+          <form class="field" autocomplete="off">
+            <input
+              id="change-glow"
+              type="range"
+              min="0"
+              max="10"
+              step="1"
+              value="5"
+              autocomplete="off"
+            />
+            <span>5</span>
+          </form>
+        </div>
+        <div class="setting change-color">
+          <span>base color</span>
+          <div class="field">
+            <input
+              id="color-pick"
+              type="color"
+              value="#45ff00"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <div class="setting multicolor">
+          <span>multi-colored</span>
+          <form class="field" autocomplete="off">
+            <label for="i1-off"
+              >off<input type="radio" value="off" id="i1-off" name="i1" checked
+            /></label>
+            <label for="i1-on"
+              >on<input type="radio" value="on" id="i1-on" name="i1"
+            /></label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

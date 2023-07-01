@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  overflow: hidden;
+}
+
+button,
+input,
+select,
+label {
+  cursor: pointer;
+  background-color: transparent;
+}
+input {
+  accent-color: #45ff00;
+}
+
+i {
+  pointer-events: none;
+}
+
+#canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+.settings-btn {
+  position: fixed;
+  inset: 1rem 1rem auto auto;
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: 0.3s ease;
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(5px);
+  padding: 0.25rem;
+}
+
+.settings-btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+#hidden {
+  transform: scale(0) translate(-50%, -50%);
+  padding: none;
+  pointer-events: none;
+}
+
+.settings-panel {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: min(350px, 95%);
+  transform: scale(1) translate(-50%, -50%);
+  transform-origin: 0 0;
+  background: rgba(255, 255, 255, 0.125);
+  backdrop-filter: blur(5px);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s cubic-bezier(0.73, 0.03, 0.46, 1.22);
+  color: #fff;
+  gap: 1rem;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.setting {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 2rem;
+}
+.field {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  gap: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+.field span {
+  width: 20%;
+  text-align: end;
+}
+.field input:not([type="color"]) {
+  width: 80%;
+}
+.field input[type="color"] {
+  width: 100%;
+}
+
+select {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+
+input[type="range"] {
+  cursor: ew-resize;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+input[type="radio"] {
+  width: auto !important;
+  margin-left: 5px;
+}
+
+.settings-panel > * {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+fieldset > * {
+  display: flex;
+  width: 100%;
+}
+
+.panel-header {
+  padding-block: 0 0.5rem;
+}
+
+.x-btn {
+  border: none;
+}
+
+.x-btn i {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  opacity: 0.5;
+  transition: 0.3s ease;
+}
+
+.x-btn:hover i {
+  opacity: 1;
+}
