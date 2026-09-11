@@ -1,11 +1,15 @@
 # The Matrix Screensaver Effect
 
+<p align="center">
+    <img src="./screenshots/matrix.png" alt="matrix effect homepage">
+</p>
+
 ---
 
 ## Technologies used
 
-This project was developed using HTML, CSS and JavaScript, with extensive help from the canvas element in HTML.  
-fontawesome icon library was used for the icons, except that no other external libraries or cdns were used.
+- This project was developed using HTML, CSS and JavaScript, with extensive help from the 2D canvas API.
+- fontawesome icon library was used for the icons, except that no other external libraries or cdns were used.
 
 ---
 
